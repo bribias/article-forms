@@ -9,7 +9,7 @@ export default class NewsSearchContainer extends Component {
     state = {
         articles: [],
         loading: true,
-        search: 'cats'
+        search: 'cat'
     }
 
     async componentDidMount() {
