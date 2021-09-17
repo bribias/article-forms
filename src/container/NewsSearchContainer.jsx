@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import SearchComponent from '../components/Search';
 import Loading from '../components/Loading';
 import ArticleList from '../components/ArticleList';
-import { findArticles } from '../services/newsArticleAPI';
+import { fetchArticleTerm } from '../services/newsArticleAPI';
 
 export default class NewsSearchContainer extends Component {
     state = {
@@ -13,7 +13,7 @@ export default class NewsSearchContainer extends Component {
     }
 
     async componentDidMount() {
-        const articles = await findArticles(this.state.search);
+        const articles = await fetchArticleTerm(this.state.search);
         this.setState({ articles, loading: false });
     }
 

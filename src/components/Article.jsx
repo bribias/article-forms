@@ -9,7 +9,7 @@ const Article = ({ title, author, description }) => (
     </>
 );
 
-Author.propTypes = {
+Article.propTypes = {
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired
