@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Search = ({ search, onSearchChange, onSubmit }) => (
+const SearchComponent = ({ search, onSearchChange, onSubmit }) => (
     <form onSubmit={onSubmit} data-testid="search-form">
         <label>New Search
             <input
@@ -13,3 +13,11 @@ const Search = ({ search, onSearchChange, onSubmit }) => (
         <button aria-label="find-articles">Submit</button>
     </form>
 );
+
+SearchComponent.propTypes = {
+    search: PropTypes.string.isRequired,
+    onSearchChange: PropTypes.func.isRequired,
+    onSubmit: PropTypes.func.isRequired
+};
+
+export default SearchComponent;
